@@ -1,0 +1,26 @@
+<ion-navbar primary *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Healthcare Entities</ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-row wrap>
+      <ion-col width-25 *ngFor="let hce of hces">
+            <div class="selection">
+                <ion-card>
+                  <ion-item>
+                    <p>Name</p>
+                    <h2>{{hce.name}}</h2>
+                  </ion-item>
+
+                  <ion-item>
+                    <p>Type</p>
+                    <h2>{{hce.type}}</h2>
+                  </ion-item>
+                </ion-card>
+            </div>
+      </ion-col>
+    </ion-row>
+</ion-content>
