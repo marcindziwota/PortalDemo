@@ -1,11 +1,5 @@
-DreamHouse Web App
+Portal Demo
 ------------------
-
-This sample app is a mobile web app for [DreamHouse](https://dreamhouse-site.herokuapp.com/) that runs on Heroku and optionally uses Heroku Connect to get data from Salesforce.  Check out a demo:
-
-[![Demo](http://img.youtube.com/vi/sSoUGkqveMo/0.jpg)](http://www.youtube.com/watch?v=sSoUGkqveMo)
-
-This app is built with Ionic and Node.js so you can easily run it locally and on Heroku.
 
 Run Locally:
 
@@ -19,15 +13,13 @@ Run Locally:
 
 Run on Heroku:
 
-1. [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/dreamhouseapp/dreamhouse-web-app)
+1. [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/marcindziwota/PortalDemo)
 1. Check out the app: `http://<YOUR APP NAME>.herokuapp.com`
 
 Use Heroku Connect:
 
-1. [Signup for a Salesforce Developer Org](https://developer.salesforce.com/signup)
-1. [Install the DreamHouse package into the org](https://dreamhouse-site.herokuapp.com/installation/)
 1. [Add the Heroku Connect Addon to your Heroku app](https://elements.heroku.com/addons/herokuconnect)
 1. Setup Heroku Connect by clicking on *Heroku Connect* in the Resources tab of the app's management dashboard: `https://dashboard.heroku.com/apps/YOUR_APP_NAME/resources`
-1. Add mappings for `Property__c`, `Broker__c`, and `Favorite__c` each with real-time bi-direction sync.  Select all of the `__c` fields EXCEPT the `*_IMG__c` ones.
+1. Add mappings for 'Hce__c' each with real-time bi-direction sync.  Select required fields.
 1. Restart the app so the new database tables are used
-1. Check out the app and verify that sync works by changing a property's price in Salesforce
+1. Check out the app and verify that sync works by changing data in Salesforce
