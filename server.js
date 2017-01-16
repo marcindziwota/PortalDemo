@@ -23,21 +23,22 @@ client.connect();
 var hceTable = 'hce__c';
 
 //setup the demo data if needed
-client.query('SELECT * FROM salesforce.hce__c', function(error, data) {
-  if (error !== null) {
-    client.query('SELECT * FROM hce__c', function(error, data) {
-      if (error !== null) {
-        console.log('Loading Demo Data...');
-        require('./db/demo.js')(client);
-        console.log('Done Loading Demo Data!');
-      }
-    });
-  }
-  else {
-    var schema = 'salesforce.';
-    hceTable = schema + 'hce__c';
-  }
-});
+// client.query('SELECT * FROM salesforce.hce__c', function(error, data) {
+//   if (error !== null) {
+//     client.query('SELECT * FROM hce__c', function(error, data) {
+//       if (error !== null) {
+//         console.log('Loading Demo Data...');
+//         require('./db/demo.js')(client);
+//         console.log('Done Loading Demo Data!');
+//       }
+//     });
+//   }
+//   else {
+//     var schema = 'salesforce.';
+//     hceTable = schema + 'hce__c';
+//   }
+
+require('./db/demo.js')(client);
 
 app.get('/hce', function(req, res) {
   client.query('SELECT * FROM ' + hceTable, function(error, data) {

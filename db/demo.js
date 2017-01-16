@@ -1,6 +1,7 @@
 module.exports = function(client) {
 
-  client.query(`DROP TABLE hce__c`);
+  client.query(`DROP TABLE IF EXISTS hce__c`);
+  client.query(`DROP TABLE IF EXISTS hce1__c`);
  
   client.query(`CREATE TABLE hce__c (
    id SERIAL NOT NULL,
@@ -14,6 +15,4 @@ module.exports = function(client) {
   client.query(`INSERT INTO hce__c (name, type__c) VALUES ('Warsaw Hospital', 'HCO');`);
   client.query(`INSERT INTO hce__c (name, type__c) VALUES ('Paris Hospital', 'HCO');`);
   client.query(`INSERT INTO hce__c (name, type__c) VALUES ('Cracow Hospital', 'PO');`);
-
-
 };
