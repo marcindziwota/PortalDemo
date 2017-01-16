@@ -22,7 +22,7 @@ client.connect();
 
 var hceTable = 'hce__c';
 
-setup the demo data if needed
+//setup the demo data if needed
 client.query('SELECT * FROM salesforce.Account', function(error, data) {
   if (error !== null) {
     client.query('SELECT * FROM hce__c', function(error, data) {
@@ -37,6 +37,7 @@ client.query('SELECT * FROM salesforce.Account', function(error, data) {
     var schema = 'salesforce.';
     hceTable = schema + 'Account';
   }
+});
 
 app.get('/hce', function(req, res) {
   client.query('SELECT * FROM ' + hceTable, function(error, data) {
