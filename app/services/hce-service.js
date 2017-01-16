@@ -10,7 +10,7 @@ let prettifyHce = (hce) => {
     let prettyHce = {
         id: hce.id,
         name: hce.name,
-        type: hce.type__c
+        type: hce.gsd_hcetype__c
     };
     return prettyHce;
 };

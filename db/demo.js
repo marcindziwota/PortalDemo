@@ -7,12 +7,12 @@ module.exports = function(client) {
    id SERIAL NOT NULL,
    sfid CHARACTER VARYING(18) UNIQUE,
    name CHARACTER VARYING(80),
-   type__c CHARACTER VARYING(20)
+   gsd_hcetype__c CHARACTER VARYING(20)
   );`);
 
-  client.query(`INSERT INTO hce__c (name, type__c) VALUES ('Berlin Hospital', 'HCO');`);
-  client.query(`INSERT INTO hce__c (name, type__c) VALUES ('London Hospital', 'PO');`);
-  client.query(`INSERT INTO hce__c (name, type__c) VALUES ('Warsaw Hospital', 'HCO');`);
-  client.query(`INSERT INTO hce__c (name, type__c) VALUES ('Paris Hospital', 'HCO');`);
-  client.query(`INSERT INTO hce__c (name, type__c) VALUES ('Cracow Hospital', 'PO');`);
+  client.query(`INSERT INTO hce__c (name, gsd_hcetype__c) VALUES ('Berlin Hospital', 'HCO');`);
+  client.query(`INSERT INTO hce__c (name, gsd_hcetype__c) VALUES ('London Hospital', 'PO');`);
+  client.query(`INSERT INTO hce__c (name, gsd_hcetype__c) VALUES ('Warsaw Hospital', 'HCO');`);
+  client.query(`INSERT INTO hce__c (name, gsd_hcetype__c) VALUES ('Paris Hospital', 'HCO');`);
+  client.query(`INSERT INTO hce__c (name, gsd_hcetype__c) VALUES ('Cracow Hospital', 'PO');`);
 };
